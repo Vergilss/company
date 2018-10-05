@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			@font-face {
+			  font-family: 'iconfont';
+			  src: url('iconfont/iconfont.eot');
+			  src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+			  url('iconfont/iconfont.woff') format('woff'),
+			  url('iconfont/iconfont.ttf') format('truetype'),
+			  url('iconfont/iconfont.svg#iconfont') format('svg');
+			}
+			.iconfont{
+			  font-family:"iconfont" !important;
+			  font-size:16px;font-style:normal;
+			  -webkit-font-smoothing: antialiased;
+			  -webkit-text-stroke-width: 0.2px;
+			  -moz-osx-font-smoothing: grayscale;
+			}
+			
+			html,body{height:100%;margin:0;padding:0;}
+			.whole{width:28rem;box-sizing:border-box;height:100%;position:relative;margin-left:1rem;font-size:0.7rem;}
+			.whole .one{height:100%;width:11.2rem;float:left;background:#0e0d12;position:relative;}
+			.whole .one>span{position:absolute;top:0;left:0;right:0;bottom:0;;margin:auto;height:3rem;width:9rem;line-height:3rem;
+			text-align:center;font-size:2rem;color:white;}
+			.whole .two{height:100%;width:16.8rem;float:left;box-sizing:border-box;padding:0.8rem;}
+			.whole .two .wdiv3d1 .tittle{font-size:1.5rem;height:2.5rem;}
+			.whole .two .wdiv3d1 .logo{height:1.5rem;line-height:1.5rem;margin-bottom:1rem;}
+			.whole .two .wdiv3d1 .logo span{font-size:0.7rem;height:1.5rem;line-height:1.5rem;display:inline-block;}
+			.whole .two .wdiv3d1 .logo img{width:3rem;height:1.11rem;float:right;}
+			
+			
+			.whole .two .wdiv3d2 input{height:1.5rem;width:5rem;padding:0;}
+			.whole .two .wdiv3d2 .spe{margin-bottom:1rem;width:100%;height:3rem;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(1) input{width:100%;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(1)>span{margin-bottom:0.5rem;display:inline-block;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2)>span{margin-bottom:0.5rem;display:inline-block;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee{height:1.5rem;width:100%;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee .speee{float:left;position:relative;width:7rem;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee .speee:nth-of-type(2){float:right;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee .speee .selec{height:1.5rem;width:7rem;position:absolute;line-height:1.5rem;
+			background:url(../static/jiao.jpg) no-repeat right 0;background-size:1.6rem 1.5rem;border:0.001rem solid black;
+			box-sizing:border-box;padding-left:0.3rem;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee .speee  .opti{background:deeppink;position:absolute;margin:0;padding:0;
+			top:1.5rem;display:none;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee .speee  .opti li{list-style:none;height:1.5rem;width:7rem;
+			line-height:1.5rem;box-sizing:border-box;padding-left:0.3rem;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee .speee .aa{width:3rem;}
+			.whole .two .wdiv3d2 .spe:nth-of-type(2) .spee .speee .tu{position:absolute;right:1.5rem;width:0.1rem;height:1.5rem;
+			border-left:0.001rem solid black;z-index:1;}
+			
+			.whole .two .wdiv3d2 .spe:nth-of-type(3)>span{margin-bottom:0.5rem;display:inline-block;}
+			
+			.whole .two .wdiv3d3{width:100%;height:1.5rem;box-sizing:border-box;padding:0 1rem;}
+			.whole .two .wdiv3d3 .wlbtn{height:1.5rem;width:100%;background:deepskyblue;color:white;line-height:1.5rem;text-align:center;
+			border-radius:0.2rem;}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+		<script>
+	        var offWidth = window.screen.width/30; 
+	        console.log(window.screen.width);
+	        console.log(offWidth);
+	        document.getElementsByTagName("html")[0].style.fontSize=offWidth+'px'; 
+	    </script>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="whole">
+			<div class="one">
+				<span>$38,000</span>
+			</div>
+			<div class="two">
+				<div class="wdiv3d1">
+					<div class="tittle">Payments</div>
+					<div class="logo">
+						<span>Pay with credit card</span>
+						<img src="static/visa.jpg" alt="" />
+					</div>
+				</div>
+				<div class="wdiv3d2">		
+					<div class="spe">
+						<span>Credit and number</span><br>
+						<input type="text" placeholder="4584" readonly="readonly"/>
+					</div>
+					<div class="spe">
+						<span>Expiration</span><br>
+						<div class="spee">
+							<div class="speee">
+								<div class="tu"></div>
+								<div class="selec selec1">	</div>
+								<ul class="opti opti1">
+									<li value="January">January</li>
+									<li value="February">February</li>
+									<li value="March">March</li>
+									<li value="April">April</li>
+									<li value="May">May</li>
+									<li value="June">June</li>
+									<li value="July">July</li>
+									<li value="August">August</li>
+									<li value="September">September</li>
+									<li value="October">October</li>
+									<li value="November">November</li>
+									<li value="December">December</li>
+								</ul>
+							</div>
+							<div class="speee">
+								<div class="tu"></div>
+								<div class="selec selec2"></div>
+								<ul class="opti opti2">
+									<li class="aa" value="2015">2015</li>
+									<li class="aa" value="2015">2016</li>
+									<li class="aa" value="2015">2017</li>
+									<li class="aa" value="2015">2018</li>
+									<li class="aa" value="2015">2019</li>
+									<li class="aa" value="2015">2020</li>
+									<li class="aa" value="2015">2021</li>
+									<li class="aa" value="2015">2022</li>
+									<li class="aa" value="2015">2023</li>
+									<li class="aa" value="2015">2024</li>
+								</ul>
+							</div>
+							
+						</div>		
+					</div>
+					<div class="spe">
+						<span>CVC/CVV</span><br>
+						<input type="text" placeholder="Cardholder Name" readonly="readonly"/>
+						<span>3 or 4 digits code</span>
+					</div>
+				</div>
+				<div class="wdiv3d3">
+					<div class="wlbtn">PAY NOW</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+	$(".selec1").bind("click",function(){
+		if($(".opti1").css("display")=="none"){
+			$(".opti1").css("display","block");
+			$(".opti1 li").css("background","white");
+			if($(".opti2").css("display")=="block"){
+				$(".opti2").css("display","none");
+			}
+		}else if($(".opti1").css("display")=="block"){
+			$(".opti1").css("display","none");
+		}
+	})
+	$(".opti1 li").bind("click",function(){
+		$(".selec1").html(($(this).text()));
+		if($(".opti1").css("display")=="none"){
+			$(".opti1").css("display","block");
+			$(".opti1 li").css("background","white")
+		}else if($(".opti1").css("display")=="block"){
+			$(".opti1").css("display","none");
+		}
+	})
+	
+	$(".selec2").bind("click",function(){
+		if($(".opti2").css("display")=="none"){
+			$(".opti2").css("display","block");
+			$(".opti2 li").css("background","white");
+			if($(".opti1").css("display")=="block"){
+				$(".opti1").css("display","none");
+			}
+		}else if($(".opti2").css("display")=="block"){
+			$(".opti2").css("display","none");
+		}
+	})
+	$(".opti2 li").bind("click",function(){
+		$(".selec2").html(($(this).text()));
+		if($(".opti2").css("display")=="none"){
+			$(".opti2").css("display","block");
+			$(".opti2 li").css("background","white")
+		}else if($(".opti2").css("display")=="block"){
+			$(".opti2").css("display","none");
+		}
+	})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
