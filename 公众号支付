@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button class="btn1">生成新订单</button>
+		<button class="btn2">支付</button>
+	</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+	var data1;
+	var btn1=document.getElementsByClassName("btn1")[0];
+	var btn2=document.getElementsByClassName("btn2")[0];
+	btn1.onclick=function(){
+		var str="";
+		for(var i=0;i<10;i++){
+			var num=parseInt(Math.random()*10);
+			str+=num;
+		};
+		obj.data.orderno=str;
+		data1=JSON.stringify(obj);
+	}
+	var obj={
+	    "data": {
+	        "payplatformname": "payfosun", 
+	        "paytype": "WXPAYZJ",
+	        "orderno": "123452",
+	        "totalFee": 0.01,
+	        "type": "CNY",
+	        "app_id": "1235",
+	        "platform_code": "平台标识",
+	        "insurer_id": "2235",
+	        "insurer_name": "复星保支付",
+	        "product_id": "2235",
+	        "product_name": "保险产品名称",
+	        "insure_no": "2235",
+	        "order_no": "2235",
+	        "product_total": "0.01",
+	        "pay_money": "0.01",
+	        "pay_datestamp": "2235",
+	        "pay_type": "wap",
+	        "pay_way": "ss"
+	    }
+	};
+	btn2.onclick=function(){
+		$.ajax({
+			url: "http://10.11.15.23:8881/fubao/wecharpay",
+		    data:data1,
+			cache:false,
+			async:true,
+			type:"POST",
+			dataType:"json",
+			contentType:"application/json",
+			success:function(res){
+				console.log(res);
+				var data2=res.data;
+				var arr=[];
+				for(var i in data2 ){
+					var a={};
+					a[i]=data2[i];
+					arr.push(a)
+				}
+				var arr2=[];
+				for(var i in data2){
+					arr2.push(i);
+				}
+				var f=document.createElement("form");
+				f.action="https://uestore.pflife.com.cn/payfosun/wechatpay/thirdwxpay.do";
+				f.method="post";
+				f.id="formm";
+				document.body.appendChild(f);
+				var formm=document.getElementById("formm");
+				for(var i=0;i<arr.length;i++){
+					var input=document.createElement("input");
+					input.type="hidden";
+					input.id=arr2[i];
+					input.name=arr2[i];
+					input.value=arr[i][arr2[i]];
+					formm.appendChild(input);
+				}
+				formm.submit();
+			}
+		});
+	}
+</script>
